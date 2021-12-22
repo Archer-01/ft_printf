@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 09:59:15 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/22 16:18:30 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/22 16:24:55 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_parse_conversion(char conversion, va_list *ap)
 		return (ft_putstr(va_arg(*ap, char *)));
 	else if (conversion == 'p')
 		return (ft_putstr("0x") \
-		 + ft_putaddr_hex(va_arg(*ap, unsigned long), HEXA_LOWER));
+		+ ft_putaddr_hex(va_arg(*ap, unsigned long), HEXA_LOWER));
 	else if (conversion == 'd' || conversion == 'i')
 		return (ft_putnbr(va_arg(*ap, int)));
 	else if (conversion == 'u')

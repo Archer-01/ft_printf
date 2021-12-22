@@ -6,13 +6,13 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 16:02:22 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/22 16:05:27 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/22 16:25:37 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-int	ft_putnbr_hex(unsigned int nb, const char * base)
+int	ft_putnbr_hex(unsigned int nb, const char *base)
 {
 	if (nb >= 0 && nb < HEXA_LEN)
 		return (ft_putchar(base[nb]));
