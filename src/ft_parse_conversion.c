@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 09:59:15 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/22 14:44:22 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/22 14:57:59 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int	ft_parse_conversion(char conversion, va_list *ap)
 		 + ft_putaddr_hex(va_arg(*ap, unsigned long), HEXA_LOWER));
 	else if (conversion == 'd' || conversion == 'i')
 		return (ft_putnbr(va_arg(*ap, int)));
+	else if (conversion == 'u')
+		return (ft_putnbr_unsigned(va_arg(*ap, unsigned int)));
 	return (0);
 }

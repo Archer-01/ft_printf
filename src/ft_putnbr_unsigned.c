@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/22 09:29:25 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/22 15:00:25 by hhamza           ###   ########.fr       */
+/*   Created: 2021/12/22 14:53:34 by hhamza            #+#    #+#             */
+/*   Updated: 2021/12/22 14:56:47 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "../include/libft.h"
 
-# include <unistd.h>
-
-# define HEXA_LEN 16
-# define HEXA_UPPER "0123456789ABCDEF"
-# define HEXA_LOWER "0123456789abcdef"
-
-int	ft_putchar(char c);
-int	ft_putstr(const char *str);
-size_t	ft_strlen(const char *str);
-int	ft_putaddr_hex(unsigned long nb, const char *base);
-int	ft_putnbr(int nb);
-int	ft_putnbr_unsigned(unsigned int nb);
-
-#endif
+int	ft_putnbr_unsigned(unsigned int nb)
+{
+	if (nb >= 0 && nb < 10)
+		return (ft_putchar(nb + '0'));
+	else
+		return (ft_putnbr_unsigned(nb / 10) + ft_putnbr_unsigned(nb % 10));
+}
