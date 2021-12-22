@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 09:29:25 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/22 10:14:38 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/22 13:04:23 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,13 @@
 
 # include <unistd.h>
 
+# define HEXA_LEN 16
+# define HEXA_UPPER "0123456789ABCDEF"
+# define HEXA_LOWER "0123456789abcdef"
+
 int	ft_putchar(char c);
 int	ft_putstr(const char *str);
+size_t	ft_strlen(const char *str);
+int	ft_putaddr_hex(unsigned long nb, const char *base);
 
 #endif

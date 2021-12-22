@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse_conversion.c                              :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/22 09:59:15 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/22 12:59:28 by hhamza           ###   ########.fr       */
+/*   Created: 2021/12/22 11:28:13 by hhamza            #+#    #+#             */
+/*   Updated: 2021/12/22 11:29:10 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../include/libft.h"
 
-int	ft_parse_conversion(char conversion, va_list *ap)
+size_t	ft_strlen(const char *str)
 {
-	if (conversion == 'c')
-		return (ft_putchar(va_arg(*ap, int)));
-	else if (conversion == 's')
-		return (ft_putstr(va_arg(*ap, char *)));
-	else if (conversion == 'p')
-		return (ft_putstr("0x") \
-		 + ft_putaddr_hex(va_arg(*ap, unsigned long), HEXA_LOWER));
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		++i;
+	return (i);
 }
