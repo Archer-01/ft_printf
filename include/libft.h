@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 09:29:25 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/22 15:00:25 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/22 16:02:19 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ size_t	ft_strlen(const char *str);
 int	ft_putaddr_hex(unsigned long nb, const char *base);
 int	ft_putnbr(int nb);
 int	ft_putnbr_unsigned(unsigned int nb);
+int	ft_putnbr_hex(unsigned int nb, const char *base);
 
 #endif
