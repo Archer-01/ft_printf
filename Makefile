@@ -22,7 +22,7 @@ PROG	:= ft_printf
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
-			$(AR) $(NAME) $(OBJS)
+			$(AR) $(NAME) $?
 
 %.o:	$(SRC_DIR)/%.c
 		$(CC) -c $(CFLAGS) -I $(INCLUDES_DIR) -c -o $@ $<
