@@ -12,7 +12,7 @@ SRC_DIR		:= src
 
 # *********************************** Files ************************************
 NAME	:= libftprintf.a
-SRCS	:= 
+SRCS	:= ft_printf.c ft_parse_conversion.c ft_putchar.c
 OBJS	:= $(SRCS:.c=.o)
 MAIN	:= main.c
 PROG	:= ft_printf
