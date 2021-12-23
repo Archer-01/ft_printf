@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 10:37:42 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/22 16:25:18 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/23 22:12:40 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_putaddr_hex(unsigned long nb, const char *base)
 {
 	if (nb >= 0 && nb < HEXA_LEN)
 		return (ft_putchar(base[nb]));
-	else if (nb < 0)
-		return (ft_putchar('-') + ft_putaddr_hex(-nb, base));
 	else
 		return (ft_putaddr_hex(nb / 16, base) + ft_putaddr_hex(nb % 16, base));
 }
