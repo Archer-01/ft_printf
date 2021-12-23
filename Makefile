@@ -1,6 +1,6 @@
 # ****************************** Compiler Options ******************************
 CC		:= cc
-CFLAGS	:= -Wall -Wextra -Werror -g
+CFLAGS	:= -Wall -Wextra -Werror
 
 # ******************************* Other commands *******************************
 RM	:= rm -f
@@ -16,8 +16,6 @@ SRCS	:= ft_printf.c ft_parse_conversion.c ft_putchar.c ft_putstr.c \
 			ft_strlen.c ft_putaddr_hex.c ft_putnbr.c ft_putnbr_unsigned.c \
 			ft_putnbr_hex.c
 OBJS	:= $(SRCS:.c=.o)
-MAIN	:= main.c
-PROG	:= ft_printf
 
 # ********************************** Targets ***********************************
 all:	$(NAME)
@@ -28,18 +26,12 @@ $(NAME):	$(OBJS)
 %.o:	$(SRC_DIR)/%.c
 		$(CC) -c $(CFLAGS) -I $(INCLUDES_DIR) -c -o $@ $<
 
-$(PROG):	$(MAIN) $(NAME)
-			$(CC) $(CFLAGS) $(MAIN) $(NAME) -o $(PROG)
-
-run:	$(PROG)
-		@./$(PROG)
-
 clean:
-	$(RM) $(OBJS) $(PROG)
+	$(RM) $(OBJS)
 
 fclean:	clean
 		$(RM) $(NAME)
 
 re:	fclean all
 
-.PHONY:	all clean fclean re run
+.PHONY:	all clean fclean re
