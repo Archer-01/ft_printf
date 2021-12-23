@@ -6,11 +6,11 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 09:59:15 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/22 16:34:49 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/23 19:47:36 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_parse_conversion(char conversion, va_list *ap)
 {

@@ -26,6 +26,8 @@ $(NAME):	$(OBJS)
 %.o:	$(SRC_DIR)/%.c
 		$(CC) -c $(CFLAGS) -I $(INCLUDES_DIR) -c -o $@ $<
 
+.c.o:
+		$(CC) -c $(CFLAGS) -I $(INCLUDES_DIR) -c -o $@ $<
 clean:
 	$(RM) $(OBJS)
 
