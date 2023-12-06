@@ -25,7 +25,7 @@ touch main.c
 
 int	main(void)
 {
-	ft_printf("%s is cool! %d/100", "ft_printf", 100);
+	ft_printf("%s is cool! %d/100\n", "ft_printf", 100);
 	return (0);
 }
 ```
