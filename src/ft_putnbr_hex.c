@@ -14,7 +14,7 @@
 
 int	ft_putnbr_hex(unsigned int nb, const char *base)
 {
-	if (nb >= 0 && nb < HEXA_LEN)
+	if (nb < HEXA_LEN)
 		return (ft_putchar(base[nb]));
 	else
 		return (ft_putnbr_hex(nb / HEXA_LEN, base) \

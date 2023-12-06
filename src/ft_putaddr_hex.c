@@ -14,7 +14,7 @@
 
 int	ft_putaddr_hex(unsigned long nb, const char *base)
 {
-	if (nb >= 0 && nb < HEXA_LEN)
+	if (nb < HEXA_LEN)
 		return (ft_putchar(base[nb]));
 	else
 		return (ft_putaddr_hex(nb / 16, base) + ft_putaddr_hex(nb % 16, base));
